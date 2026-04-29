@@ -37,4 +37,36 @@ public class Reparacion {
     public void setdescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public String geturgente() {
+        return urgente;
+    }
+
+    public void seturgente(String urgente) {
+        this.urgente = urgente;
+    }
+
+    @Override
+    public String toString() {
+        return ("El codigo de reparacion del producto es: " + codigo + " del cliente " + cliente
+                + ", y su descrición es " + descripcion + " y es " + urgente);
+
+    }
+
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+
+        Reparacion other = (Reparacion) obj;
+        return this.codigo.equals(other.codigo);
+    }
+
+    @Override
+    public int hashCode() {
+        return codigo.hashCode();
+    }
 }
