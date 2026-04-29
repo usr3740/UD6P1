@@ -5,9 +5,9 @@ public class Reparacion {
     private String codigo;
     private String cliente;
     private String descripcion;
-    private String urgente;
+    private boolean urgente;
 
-    public Reparacion(String codigo, String cliente, String descripcion, String urgente) {
+    public Reparacion(String codigo, String cliente, String descripcion, boolean urgente) {
         this.codigo = codigo;
         this.cliente = cliente;
         this.descripcion = descripcion;
@@ -38,11 +38,11 @@ public class Reparacion {
         this.descripcion = descripcion;
     }
 
-    public String geturgente() {
+    public boolean geturgente() {
         return urgente;
     }
 
-    public void seturgente(String urgente) {
+    public void seturgente(boolean urgente) {
         this.urgente = urgente;
     }
 
