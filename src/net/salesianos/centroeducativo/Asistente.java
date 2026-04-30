@@ -41,4 +41,20 @@ public class Asistente {
         return ("El dni de la persona es" + dni + " su nombre es" + nombre + " y su grupo es " + grupo);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+
+        if(this == obj) return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+
+        Asistente otro = (Asistente) obj;
+        return this.dni.equals(otro.dni);
+    }
+
+    @Override
+    public int hashCode() {
+        return dni.hashCode();
+    }
+
 }
